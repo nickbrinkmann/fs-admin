@@ -13,14 +13,14 @@ export class UsersComponent implements OnInit {
     private httpClient: HttpClient
   ) { }
 
-  public properties: Array<any> = new Array();
+  public bookingrequests: Array<any> = new Array();
 
   ngOnInit() {
     this.httpClient
-    .get("http://localhost:3000/api/properties")
+    .get("http://localhost:3000/api/properties/bookings/all")
     .subscribe(
       (response: any) => {
-        this.properties = response;
+        this.bookingrequests = response;
       },
       (err) => {
         console.log(err);

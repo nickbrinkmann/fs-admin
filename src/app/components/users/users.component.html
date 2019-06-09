@@ -1,20 +1,25 @@
-<h3>Users</h3>
-<div class="table-responsive">
-  <table class="table table-striped table-sm">
+<h3>Properties</h3>
+
+<div class = "table-responsive">
+  <table class = "table table-striped table-sm">
     <thead>
       <tr>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Email</th>
-        <th>Cell Phone</th>
+        <th>ID #</th>
+        <th>Date From</th>
+        <th>Date To</th>
+        <th>Property ID</th>
+        <th>Status</th>
+        <th>User ID</th>
       </tr>
     </thead>
     <tbody>
-      <tr class="table-row" *ngFor="let user of users">
-        <td>{{user.firstname}}</td>
-        <td>{{user.lastname}}</td>
-        <td>{{user.email}}</td>
-        <td>{{user.phone_number}}</td>
+      <tr *ngFor = "let bookingrequest of bookingrequests">
+        <td>{{bookingrequest.id}}</td>
+        <td>{{bookingrequest.datefrom}}</td>
+        <td>{{bookingrequest.dateto}}</td>
+        <td>{{bookingrequest.propertyid}}</td>
+        <td>{{bookingrequest.status}}</td>
+        <td>{{bookingrequest.userid}}</td>
       </tr>
     </tbody>
   </table>
